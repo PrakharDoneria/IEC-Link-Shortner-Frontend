@@ -1,0 +1,92 @@
+/* Background styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/background.png') no-repeat center center/cover;
+  z-index: -1;
+  filter: blur(8px);  /* Background blur */
+}
+
+/* Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.2);  /* Transparent white */
+  backdrop-filter: blur(10px);            /* Blur effect on the card */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: none;                       /* Remove black shadow */
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;       /* Fade-in animation */
+}
+
+/* Card fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);  /* Light background */
+  color: #333;  /* Dark text for input */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #00c6ff;               /* Blue button */
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0094cc;               /* Darker blue on hover */
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  animation: fadeInResult 1s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #00c6ff;                           /* Blue link color */
+}
+
+/* Result fade-in animation */
+@keyframes fadeInResult {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
